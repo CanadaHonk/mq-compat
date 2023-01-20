@@ -83,6 +83,6 @@ ${makeTable(methods)}\n\n`;
   links += `<a href="#${name.toLowerCase()}">${name}</a>`;
 }
 
-writeFileSync('out/index.html', template
+writeFileSync('docs/index.html', template
   .replace('_content_', content)
   .replace('_links_', links));
