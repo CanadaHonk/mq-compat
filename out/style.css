@@ -177,15 +177,6 @@ table > thead th > div {
   padding: 12px;
 }
 
-table > thead th span {
-  line-height: 1;
-  padding-top: 0.5rem;
-  position: relative;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-}
-
 tbody th {
   font-family: monospace;
   font-size: 1vw;
