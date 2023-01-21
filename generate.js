@@ -10,7 +10,7 @@ const getIcon = value => {
   // if (value.length <= 3) return 'yes';
   // if (value === 'trunk') return 'yes';
 
-  if (value.length === '1680780'.length) return 'bug';
+  if (value.length === '1680780'.length) return 'no'; // 'bug';
 
   if (value[0] === '<') return 'none';
 
@@ -24,9 +24,11 @@ const getExtra = value => {
   const icon = getIcon(value);
 
   switch (icon) {
-    case 'bug': return `<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=${value}" target="_blank" rel="noopener">${value}</a>`;
+    // case 'bug': return `<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=${value}" target="_blank" rel="noopener">${value}</a>`;
     case 'patch': return `<a href="https://phabricator.services.mozilla.com/${value}" target="_blank" rel="noopener">${value}</a>`;
   }
+
+  if (value.length === '1680780'.length) return `<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=${value}" target="_blank" rel="noopener">Bug ${value}</a>`;
 
   if (icon === 'yes' && value !== true) return value;
 
