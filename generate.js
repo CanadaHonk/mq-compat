@@ -67,6 +67,64 @@ ${Object.keys(methods).flatMap(x => [
 </tbody>
 </table>`;
 
+const getData = (things, browser) => {
+  const data = Object.keys(things).reduce((acc, x) => {
+    let val = things[x][browser];
+    let icon = getIcon(things[x][browser]);
+    if (val?.includes?.('Stub')) icon = 'stub';
+    if (icon === 'bug') icon = 'no';
+
+    acc[icon] = (acc[icon] ?? 0) + 1;
+    return acc;
+  }, {});
+
+  data.total = Object.keys(things).length;
+
+  return data;
+};
+
+const makeGraph = (data, label, clas) => `<div class="stats ${clas}">
+<span>${label}</span>
+<div>
+${['yes', 'patch', 'no', 'unknown', 'stub'].filter(x => data[x]).map(x => `<div class="stat-${x}" style="width: ${(data[x] / data.total) * 100}%">${x}</div>`).join('\n')}
+</div>
+</div>#`;
+
+const buildGraphs = (things, label) => {
+  let out = '';
+
+  console.log(things);
+
+  for (const browser of [ 'chrome', 'firefox' ]) {
+    const data = getData(things, browser);
+    out += makeGraph(data, `<div class="icon-${browser}"></div> <span style="vertical-align: middle">${label}</span>`, browser);
+  }
+
+  return out;
+};
+
+const makeGraphs = methods => {
+  let out = '';
+  out += buildGraphs(methods, 'Methods');
+  out += buildGraphs(Object.values(methods).reduce((acc, x) => {
+    for (const y in x.parameters) {
+      acc[Math.random()] = x.parameters[y];
+    }
+
+    return acc;
+  }, {}), 'Options');
+
+  // Swap order to be in browser chunks nicely
+  out = out.split('#');
+
+  let t = out[1];
+  out[1] = out[2];
+  out[2] = t;
+
+  out = out.join('\n');
+
+  return out;
+};
 
 import { readFileSync, readdirSync, mkdirSync, writeFileSync } from 'fs';
 
@@ -78,6 +136,8 @@ for (const file of await readdirSync('data')) {
   const { name, methods } = (await import('./data/' + file)).default;
 
   content += `<h1 id="${name.toLowerCase()}">${name}</h1>
+${makeGraphs(methods)}
+
 ${makeTable(methods)}\n\n`;
 
   links += `<a href="#${name.toLowerCase()}">${name}</a>`;
