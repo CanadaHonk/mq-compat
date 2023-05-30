@@ -1,2 +1,2 @@
-# cdp-compat
- Compatibility browser data for Chrome DevTools Protocol
+# mq-compat
+Browser data dashboard for Media Queries Level 5
