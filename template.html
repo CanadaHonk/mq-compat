@@ -1,5 +1,5 @@
 <head>
-  <title>CDP Compat</title>
+  <title>Are We Media Queries 5 Yet?</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -8,14 +8,16 @@
 
 <body>
   <div id="sidebar">
-    <h1>CDP Compat</h1>
-    <h2>Compatibility browser data for the<br><a href="https://chromedevtools.github.io/devtools-protocol/" target="_blank" rel="noopener">Chrome DevTools Protocol</a></h2>
+    <h1>Are We Media Queries 5 Yet?</h1>
+    <h2>Compatibility browser data for <br><a href="https://www.w3.org/TR/mediaqueries-5/" target="_blank" rel="noopener">Media Queries Level 5</a></h2>
 
     <hr>
 
     _links_
 
     <footer>
+      _overall_
+
       Work in progress <br>
       Icons from MDN and Octicons
     </footer>
@@ -24,4 +26,41 @@
   <div id="content">
     _content_
   </div>
+
+  <script>
+    const mediaJSParseable = query => window.matchMedia(query).media === query;
+    const mediaCSSParseable = query => {
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      document.head.appendChild(style);
+
+      const sheet = style.sheet;
+      try {
+        sheet.insertRule("@media " + query + "{}", 0);
+        return sheet.cssRules.length == 1 &&
+            sheet.cssRules[0].media.mediaText != "not all";
+      } finally {
+        while (sheet.cssRules.length)
+          sheet.deleteRule(0);
+        style.remove();
+      }
+    };
+
+    const mediaKnown = query => window.matchMedia(`${query}, not all and ${query}`).matches;
+
+    const testQuery = query => mediaJSParseable(query) && mediaCSSParseable(query) && mediaKnown(query);
+
+    for (const x of document.querySelectorAll('tbody tr')) {
+      const property = x.children[0].textContent;
+      const cell = x.children[1].children[0];
+
+      const supported =
+        testQuery(`(${property})`) || // boolean
+        testQuery(`(${property}: none)`) || // none
+        testQuery(`(${property}: 1)`) || // number
+        testQuery(`(${property}: standard)`); // standard
+
+      cell.innerHTML = `<div class="icon-${supported ? 'yes' : 'no'}"></div>`;
+    }
+  </script>
 </body>

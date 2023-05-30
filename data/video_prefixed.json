@@ -1,0 +1,15 @@
+{
+  "name": "Video Prefixed",
+  "methods": {
+    "video-color-gamut": {
+      "chrome": false,
+      "firefox": false,
+      "safari": false
+    },
+    "video-dynamic-range": {
+      "chrome": false,
+      "firefox": true,
+      "safari": false
+    }
+  }
+}

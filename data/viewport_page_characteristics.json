@@ -1,0 +1,45 @@
+{
+  "name": "Viewport/Page Characteristics",
+  "methods": {
+    "width": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "height": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "aspect-ratio": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "orientation": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "overflow-block": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "overflow-inline": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "horizontal-viewport-segments": {
+      "chrome": false,
+      "firefox": false,
+      "safari": false
+    },
+    "vertical-viewport-segments": {
+      "chrome": false,
+      "firefox": false,
+      "safari": false
+    }
+  }
+}

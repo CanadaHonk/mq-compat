@@ -1,0 +1,35 @@
+{
+  "name": "Color",
+  "methods": {
+    "color": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "color-index": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "monochrome": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "color-gamut": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "dynamic-range": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "inverted-colors": {
+      "chrome": false,
+      "firefox": "disabled",
+      "safari": true
+    }
+  }
+}

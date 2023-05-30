@@ -1,5 +1,5 @@
 <head>
-  <title>CDP Compat</title>
+  <title>Are We Media Queries 5 Yet?</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -8,48 +8,64 @@
 
 <body>
   <div id="sidebar">
-    <h1>CDP Compat</h1>
-    <h2>Compatibility browser data for the<br><a href="https://chromedevtools.github.io/devtools-protocol/" target="_blank" rel="noopener">Chrome DevTools Protocol</a></h2>
+    <h1>Are We Media Queries 5 Yet?</h1>
+    <h2>Compatibility browser data for <br><a href="https://www.w3.org/TR/mediaqueries-5/" target="_blank" rel="noopener">Media Queries Level 5</a></h2>
 
     <hr>
 
-    <a href="#http">HTTP</a><a href="#target">Target</a>
+    <a href="#color">Color</a><a href="#display quality">Display Quality</a><a href="#interaction">Interaction</a><a href="#scripting">Scripting</a><a href="#user preference">User Preference</a><a href="#video prefixed">Video Prefixed</a><a href="#viewport/page characteristics">Viewport/Page Characteristics</a>
 
     <footer>
+      <div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 70%">yes</div>
+<div class="stat-disabled" style="width: 3.3333333333333335%">disabled</div>
+<div class="stat-no" style="width: 26.666666666666668%">no</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 76.66666666666667%">yes</div>
+<div class="stat-disabled" style="width: 6.666666666666667%">disabled</div>
+<div class="stat-no" style="width: 16.666666666666664%">no</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 70%">yes</div>
+<div class="stat-no" style="width: 30%">no</div>
+</div>
+</div>
+
+
       Work in progress <br>
       Icons from MDN and Octicons
     </footer>
   </div>
 
   <div id="content">
-    <h1 id="http">HTTP</h1>
+    <h1 id="color">Color</h1>
 <div class="stats chrome">
-<span><div class="icon-chrome"></div> <span style="vertical-align: middle">Methods</span></span>
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 100%">yes</div>
-</div>
-</div>
-<div class="stats chrome">
-<span><div class="icon-chrome"></div> <span style="vertical-align: middle">Options</span></span>
-<div>
-<div class="stat-yes" style="width: 100%">yes</div>
+<div class="stat-yes" style="width: 83.33333333333334%">yes</div>
+<div class="stat-no" style="width: 16.666666666666664%">no</div>
 </div>
 </div>
 <div class="stats firefox">
-<span><div class="icon-firefox"></div> <span style="vertical-align: middle">Methods</span></span>
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 50%">yes</div>
-<div class="stat-patch" style="width: 37.5%">patch</div>
-<div class="stat-no" style="width: 12.5%">no</div>
+<div class="stat-yes" style="width: 83.33333333333334%">yes</div>
+<div class="stat-disabled" style="width: 16.666666666666664%">disabled</div>
 </div>
 </div>
-<div class="stats firefox">
-<span><div class="icon-firefox"></div> <span style="vertical-align: middle">Options</span></span>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 64.70588235294117%">yes</div>
-<div class="stat-patch" style="width: 5.88235294117647%">patch</div>
-<div class="stat-no" style="width: 17.647058823529413%">no</div>
-<div class="stat-stub" style="width: 11.76470588235294%">stub</div>
+<div class="stat-yes" style="width: 100%">yes</div>
 </div>
 </div>
 
@@ -59,6 +75,10 @@
   <tr>
     <td></td>
     <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
       <!-- <span>Chrome</span> -->
       <div class="icon-chrome"></div>
     </div></th>
@@ -66,11 +86,17 @@
       <!-- <span>Firefox</span> -->
       <div class="icon-firefox"></div>
     </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
   </tr>
 </thead>
 <tbody>
 <tr>
-<th>/json/version</th>
+<th>color</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -79,9 +105,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">Browser</th>
+<th>color-index</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -90,9 +122,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">Protocol-Version</th>
+<th>monochrome</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -101,9 +139,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">User-Agent</th>
+<th>color-gamut</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -112,9 +156,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">webSocketDebuggerUrl</th>
+<th>dynamic-range</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -123,31 +173,80 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">V8-Version</th>
+<th>inverted-colors</th>
 <td><div>
-  <div class="icon-yes"></div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
   <span></span>
 </div></td>
 <td><div>
-<div class="icon-none"></div>
-<span><span>Stub</span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">WebKit-Version</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
+<div class="icon-disabled"></div>
+<span></span>
 </div></td>
 <td><div>
-<div class="icon-none"></div>
-<span><span>Stub</span></span>
+<div class="icon-yes"></div>
+<span></span>
 </div></td>
 </tr>
+</tbody>
+</table>
+
+<h1 id="display quality">Display Quality</h1>
+<div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 100%">yes</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 100%">yes</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 75%">yes</div>
+<div class="stat-no" style="width: 25%">no</div>
+</div>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <td></td>
+    <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
+      <!-- <span>Chrome</span> -->
+      <div class="icon-chrome"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Firefox</span> -->
+      <div class="icon-firefox"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
+  </tr>
+</thead>
+<tbody>
 <tr>
-<th>/json/list</th>
+<th>resolution</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -156,9 +255,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">id</th>
+<th>scan</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -167,9 +272,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">title</th>
+<th>grid</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -178,9 +289,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">type</th>
+<th>update</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -188,156 +305,6 @@
 <td><div>
 <div class="icon-yes"></div>
 <span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">url</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">webSocketDebuggerUrl</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">description</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">faviconUrl</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">devtoolsFrontendUrl</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">Visual sorting</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1738397" target="_blank" rel="noopener">Bug 1738397</a></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">Main process not included</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span>111 (nightly)</span>
-</div></td>
-</tr>
-<tr>
-<th>/json<br><small>(/json/list alias)</small></th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span>111 (nightly)</span>
-</div></td>
-</tr>
-<tr>
-<th>/json/protocol</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-yes"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>/json/new</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D166884" target="_blank" rel="noopener">D166884</a></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">url</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D166884" target="_blank" rel="noopener">D166884</a></span>
-</div></td>
-</tr>
-<tr>
-<th>/json/activate</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D166884" target="_blank" rel="noopener">D166884</a></span>
-</div></td>
-</tr>
-<tr>
-<th>/json/close</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D166884" target="_blank" rel="noopener">D166884</a></span>
-</div></td>
-</tr>
-<tr>
-<th>/devtools/inspector.html</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
 <td><div>
 <div class="icon-no"></div>
@@ -347,34 +314,26 @@
 </tbody>
 </table>
 
-<h1 id="target">Target</h1>
+<h1 id="interaction">Interaction</h1>
 <div class="stats chrome">
-<span><div class="icon-chrome"></div> <span style="vertical-align: middle">Methods</span></span>
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 100%">yes</div>
-</div>
-</div>
-<div class="stats chrome">
-<span><div class="icon-chrome"></div> <span style="vertical-align: middle">Options</span></span>
-<div>
-<div class="stat-yes" style="width: 100%">yes</div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-no" style="width: 33.33333333333333%">no</div>
 </div>
 </div>
 <div class="stats firefox">
-<span><div class="icon-firefox"></div> <span style="vertical-align: middle">Methods</span></span>
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 52.94117647058824%">yes</div>
-<div class="stat-patch" style="width: 5.88235294117647%">patch</div>
-<div class="stat-no" style="width: 41.17647058823529%">no</div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-no" style="width: 33.33333333333333%">no</div>
 </div>
 </div>
-<div class="stats firefox">
-<span><div class="icon-firefox"></div> <span style="vertical-align: middle">Options</span></span>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
 <div>
-<div class="stat-yes" style="width: 16.666666666666664%">yes</div>
-<div class="stat-patch" style="width: 11.11111111111111%">patch</div>
-<div class="stat-no" style="width: 66.66666666666666%">no</div>
-<div class="stat-unknown" style="width: 5.555555555555555%">unknown</div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-no" style="width: 33.33333333333333%">no</div>
 </div>
 </div>
 
@@ -384,6 +343,10 @@
   <tr>
     <td></td>
     <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
       <!-- <span>Chrome</span> -->
       <div class="icon-chrome"></div>
     </div></th>
@@ -391,11 +354,17 @@
       <!-- <span>Firefox</span> -->
       <div class="icon-firefox"></div>
     </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
   </tr>
 </thead>
 <tbody>
 <tr>
-<th>activateTarget</th>
+<th>pointer</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -404,9 +373,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th>attachToTarget</th>
+<th>hover</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -415,20 +390,148 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">flatten</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-unknown"></div>
+<div class="icon-yes"></div>
 <span></span>
 </div></td>
 </tr>
 <tr>
-<th>closeTarget</th>
+<th>nav-controls</th>
+<td><div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
+  <span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="scripting">Scripting</h1>
+<div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-no" style="width: 100%">no</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 100%">yes</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-no" style="width: 100%">no</div>
+</div>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <td></td>
+    <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
+      <!-- <span>Chrome</span> -->
+      <div class="icon-chrome"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Firefox</span> -->
+      <div class="icon-firefox"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+<th>scripting</th>
+<td><div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
+  <span></span>
+</div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="user preference">User Preference</h1>
+<div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-disabled" style="width: 16.666666666666664%">disabled</div>
+<div class="stat-no" style="width: 16.666666666666664%">no</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-disabled" style="width: 16.666666666666664%">disabled</div>
+<div class="stat-no" style="width: 16.666666666666664%">no</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 66.66666666666666%">yes</div>
+<div class="stat-no" style="width: 33.33333333333333%">no</div>
+</div>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <td></td>
+    <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
+      <!-- <span>Chrome</span> -->
+      <div class="icon-chrome"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Firefox</span> -->
+      <div class="icon-firefox"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+<th>prefers-reduced-motion</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -437,9 +540,32 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th>createTarget</th>
+<th>prefers-reduced-transparency</th>
+<td><div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
+  <span></span>
+</div></td>
+<td><div>
+<div class="icon-disabled"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+</tr>
+<tr>
+<th>prefers-contrast</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -448,42 +574,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">url</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
+<div class="icon-yes"></div>
 <span></span>
 </div></td>
 </tr>
 <tr>
-<th class="sub">width</th>
+<th>forced-colors</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">height</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">browserContextId</th>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -492,64 +591,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">enableBeginFrameControl</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
+<div class="icon-yes"></div>
 <span></span>
 </div></td>
 </tr>
 <tr>
-<th class="sub">newWindow</th>
+<th>prefers-color-scheme</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">background</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">forTab</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>detachFromTarget</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>getTargets</th>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -558,20 +608,164 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">filter</th>
+<th>prefers-reduced-data</th>
 <td><div>
-  <div class="icon-yes"></div>
+</div></td>
+<td><div>
+  <div class="icon-disabled"></div>
   <span></span>
 </div></td>
 <td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D167172" target="_blank" rel="noopener">D167172</a></span>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="video prefixed">Video Prefixed</h1>
+<div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-no" style="width: 100%">no</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 50%">yes</div>
+<div class="stat-no" style="width: 50%">no</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-no" style="width: 100%">no</div>
+</div>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <td></td>
+    <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
+      <!-- <span>Chrome</span> -->
+      <div class="icon-chrome"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Firefox</span> -->
+      <div class="icon-firefox"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+<th>video-color-gamut</th>
+<td><div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
+  <span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
 </div></td>
 </tr>
 <tr>
-<th>setDiscoverTargets</th>
+<th>video-dynamic-range</th>
+<td><div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
+  <span></span>
+</div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="viewport/page characteristics">Viewport/Page Characteristics</h1>
+<div class="stats chrome">
+<span><div class="icon-chrome"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 75%">yes</div>
+<div class="stat-no" style="width: 25%">no</div>
+</div>
+</div>
+<div class="stats firefox">
+<span><div class="icon-firefox"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 75%">yes</div>
+<div class="stat-no" style="width: 25%">no</div>
+</div>
+</div>
+<div class="stats safari">
+<span><div class="icon-safari"></div> <span>Queries</span></span>
+<div>
+<div class="stat-yes" style="width: 75%">yes</div>
+<div class="stat-no" style="width: 25%">no</div>
+</div>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <td></td>
+    <th><div>
+      <span>You</span>
+      <!-- <div class="icon-chrome"></div> -->
+    </div></th>
+    <th><div>
+      <!-- <span>Chrome</span> -->
+      <div class="icon-chrome"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Firefox</span> -->
+      <div class="icon-firefox"></div>
+    </div></th>
+    <th><div>
+      <!-- <span>Safari</span> -->
+      <div class="icon-safari"></div>
+    </div></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+<th>width</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -580,20 +774,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">filter</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D167209" target="_blank" rel="noopener">D167209</a></span>
+<div class="icon-yes"></div>
+<span></span>
 </div></td>
 </tr>
 <tr>
-<th>sendMessageToTarget</th>
+<th>height</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -602,9 +791,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">message</th>
+<th>aspect-ratio</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -613,9 +808,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th class="sub">sessionId</th>
+<th>orientation</th>
+<td><div>
+</div></td>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -624,42 +825,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">targetId</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
+<div class="icon-yes"></div>
 <span></span>
 </div></td>
 </tr>
 <tr>
-<th>attachToBrowserTarget</th>
+<th>overflow-block</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>autoAttachRelated</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>createBrowserContext</th>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -668,53 +842,15 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
-</tr>
-<tr>
-<th class="sub">disposeOnDetach</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
+<div class="icon-yes"></div>
 <span></span>
 </div></td>
 </tr>
 <tr>
-<th class="sub">proxyServer</th>
+<th>overflow-inline</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">proxyBypassList</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th class="sub">originsWithUniversalNetworkAccess</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>disposeBrowserContext</th>
 <td><div>
   <div class="icon-yes"></div>
   <span></span>
@@ -723,12 +859,22 @@
 <div class="icon-yes"></div>
 <span></span>
 </div></td>
+<td><div>
+<div class="icon-yes"></div>
+<span></span>
+</div></td>
 </tr>
 <tr>
-<th>exposeDevToolsProtocol</th>
+<th>horizontal-viewport-segments</th>
 <td><div>
-  <div class="icon-yes"></div>
+</div></td>
+<td><div>
+  <div class="icon-no"></div>
   <span></span>
+</div></td>
+<td><div>
+<div class="icon-no"></div>
+<span></span>
 </div></td>
 <td><div>
 <div class="icon-no"></div>
@@ -736,43 +882,16 @@
 </div></td>
 </tr>
 <tr>
-<th>getBrowserContexts</th>
+<th>vertical-viewport-segments</th>
 <td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
 <td><div>
-<div class="icon-patch"></div>
-<span><a href="https://phabricator.services.mozilla.com/D167293" target="_blank" rel="noopener">D167293</a></span>
-</div></td>
-</tr>
-<tr>
-<th>getTargetInfo</th>
-<td><div>
-  <div class="icon-yes"></div>
+  <div class="icon-no"></div>
   <span></span>
 </div></td>
 <td><div>
 <div class="icon-no"></div>
 <span></span>
-</div></td>
-</tr>
-<tr>
-<th>setAutoAttach</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
-</div></td>
-<td><div>
-<div class="icon-no"></div>
-<span></span>
-</div></td>
-</tr>
-<tr>
-<th>setRemoteLocations</th>
-<td><div>
-  <div class="icon-yes"></div>
-  <span></span>
 </div></td>
 <td><div>
 <div class="icon-no"></div>
@@ -784,4 +903,41 @@
 
 
   </div>
+
+  <script>
+    const mediaJSParseable = query => window.matchMedia(query).media === query;
+    const mediaCSSParseable = query => {
+      const style = document.createElement('style');
+      style.type = 'text/css';
+      document.head.appendChild(style);
+
+      const sheet = style.sheet;
+      try {
+        sheet.insertRule("@media " + query + "{}", 0);
+        return sheet.cssRules.length == 1 &&
+            sheet.cssRules[0].media.mediaText != "not all";
+      } finally {
+        while (sheet.cssRules.length)
+          sheet.deleteRule(0);
+        style.remove();
+      }
+    };
+
+    const mediaKnown = query => window.matchMedia(`${query}, not all and ${query}`).matches;
+
+    const testQuery = query => mediaJSParseable(query) && mediaCSSParseable(query) && mediaKnown(query);
+
+    for (const x of document.querySelectorAll('tbody tr')) {
+      const property = x.children[0].textContent;
+      const cell = x.children[1].children[0];
+
+      const supported =
+        testQuery(`(${property})`) || // boolean
+        testQuery(`(${property}: none)`) || // none
+        testQuery(`(${property}: 1)`) || // number
+        testQuery(`(${property}: standard)`); // standard
+
+      cell.innerHTML = `<div class="icon-${supported ? 'yes' : 'no'}"></div>`;
+    }
+  </script>
 </body>

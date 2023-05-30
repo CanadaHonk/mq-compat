@@ -37,6 +37,7 @@ body {
 #sidebar h1 {
   font-weight: 800;
   font-size: 2vw;
+  margin-top: 0;
 }
 
 #sidebar h2 {
@@ -48,8 +49,8 @@ body {
   position: absolute;
   bottom: 2vw;
 
-  color: #c0c4c8;
-  font-size: 1vw;
+  color: #a0a4a8;
+  font-size: 0.8vw;
 
   line-height: 1.6em;
 }
@@ -92,7 +93,7 @@ a:visited {
 
 [class^="icon-"] {
   --size: var(--icon-size, 1.4rem);
-  background-color: #f0f4f8;
+  background: #f0f4f8;
   display: inline-block;
   height: var(--size);
   -webkit-mask-position: center;
@@ -114,11 +115,15 @@ a:visited {
   mask-image: url(/yes.svg);
 }
 
-.icon-no {
+.icon-no, .icon-disabled {
   -webkit-mask-image: url(/no.svg);
   mask-image: url(/no.svg);
 
   background: var(--bad);
+}
+
+.icon-disabled {
+  background: #f0f4f8;
 }
 
 .icon-chrome {
@@ -129,6 +134,11 @@ a:visited {
 .icon-firefox {
   -webkit-mask-image: url(/firefox.svg);
   mask-image: url(/firefox.svg);
+}
+
+.icon-safari {
+  -webkit-mask-image: url(/safari.svg);
+  mask-image: url(/safari.svg);
 }
 
 .icon-unknown {
@@ -170,13 +180,13 @@ table > thead th > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.4vw;
+  font-size: 1.6vw;
   font-weight: 600;
 
   gap: 4px;
   padding: 12px;
 
-  --icon-size: 1.6rem;
+  --icon-size: 2vw;
 }
 
 tbody th {
@@ -187,6 +197,7 @@ tbody th {
 
   vertical-align: middle;
   text-align: left;
+  width: 45%;
 }
 
 tbody td > div {
@@ -214,14 +225,20 @@ table + h1 {
   align-items: center;
   margin-bottom: 6px;
   width: fit-content;
+
+  height: 26px;
 }
 
 .stats span {
   width: 6rem;
+  font-size: 15px;
+  vertical-align: middle;
+  --icon-size: 24px;
 }
 
 .stats > div {
-  height: 20px;
+  margin-top: 2px;
+  height: 22px;
   width: calc(40vw - 6rem);
 
   display: flex;
@@ -244,7 +261,7 @@ table + h1 {
   background: #7d36be;
 }
 
-.stats .stat-stub, .stats .stat-unknown {
+.stats .stat-stub, .stats .stat-unknown, .stats .stat-disabled {
   background: #808488;
 }
 
@@ -256,8 +273,29 @@ table + h1 {
   margin-top: 20px;
 }
 
-.stats.chrome + .stats.firefox {
+
+footer .stats > span {
+  width: 32px;
+}
+
+footer .stats > span > span {
+  display: none;
+}
+
+footer .stats > div > div {
+  font-size: 0;
+}
+
+footer .stats > div {
+  width: calc(max(20vw, 240px) - 32px - 2vw);
+}
+
+footer .stats:nth-last-child(2) {
+  margin-bottom: 2vw;
+}
+
+/* .stats.chrome + .stats.firefox, .stats.firefox + .stats.safari {
   border-top: 1px solid #808488;
   margin-top: 8px;
   padding-top: 8px;
-}
+} */

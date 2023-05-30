@@ -1,0 +1,10 @@
+{
+  "name": "Scripting",
+  "methods": {
+    "scripting": {
+      "chrome": false,
+      "firefox": true,
+      "safari": false
+    }
+  }
+}

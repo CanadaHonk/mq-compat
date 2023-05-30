@@ -1,0 +1,25 @@
+{
+  "name": "Display Quality",
+  "methods": {
+    "resolution": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "scan": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "grid": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "update": {
+      "chrome": true,
+      "firefox": true,
+      "safari": false
+    }
+  }
+}

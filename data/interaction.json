@@ -1,0 +1,20 @@
+{
+  "name": "Interaction",
+  "methods": {
+    "pointer": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "hover": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "nav-controls": {
+      "chrome": false,
+      "firefox": false,
+      "safari": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "User Preference",
+  "methods": {
+    "prefers-reduced-motion": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "prefers-reduced-transparency": {
+      "chrome": false,
+      "firefox": "disabled",
+      "safari": false
+    },
+    "prefers-contrast": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "forced-colors": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "prefers-color-scheme": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "prefers-reduced-data": {
+      "chrome": "disabled",
+      "firefox": false,
+      "safari": false
+    }
+  }
+}
