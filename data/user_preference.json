@@ -7,7 +7,7 @@
       "safari": true
     },
     "prefers-reduced-transparency": {
-      "chrome": false,
+      "chrome": true,
       "firefox": "disabled",
       "safari": false
     },

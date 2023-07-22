@@ -19,7 +19,7 @@
     "update": {
       "chrome": true,
       "firefox": true,
-      "safari": false
+      "safari": true
     }
   }
 }

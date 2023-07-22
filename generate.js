@@ -86,10 +86,10 @@ const getData = (things, browser) => {
   return data;
 };
 
-const makeGraph = (data, label, clas) => `<div class="stats ${clas}">
+const makeGraph = (data, label, clas = '') => `<div class="stats ${clas}">
 <span>${label}</span>
 <div>
-${['yes', 'disabled', 'no', 'unknown'].filter(x => data[x]).map(x => `<div class="stat-${x}" style="width: ${(data[x] / data.total) * 100}%">${x}</div>`).join('\n')}
+${['yes', 'disabled', 'no', 'unknown'].filter(x => data[x]).map(x => `<div class="stat-${x}" style="width: ${(data[x] / data.total) * 100}%">${({ yes: 'Supported', disabled: 'Disabled', no: 'Unsupported' })[x]}</div>`).join('\n')}
 </div>
 </div>#`;
 

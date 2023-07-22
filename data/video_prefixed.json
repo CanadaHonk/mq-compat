@@ -7,7 +7,7 @@
       "safari": false
     },
     "video-dynamic-range": {
-      "chrome": false,
+      "chrome": true,
       "firefox": true,
       "safari": false
     }
